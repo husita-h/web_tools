@@ -4,7 +4,7 @@
 	const progress = writable(0);
 </script>
 
-<h1>About Page</h1>
+<h1>Progress Bar</h1>
 
 <progress value={$progress}></progress>
 
