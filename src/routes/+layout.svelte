@@ -3,7 +3,7 @@
 </script>
 
 <!-- html -->
-<h1 class="title is-1">Web tools</h1>
+<h1 class="title is-1">web tools</h1>
 <Nav></Nav>
 
 <slot></slot>
@@ -11,7 +11,7 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <strong>link to </strong><a href="https://www.google.com/">Github Repository
+      link to <a href="https://github.com/husita-h/web_tools_sandbox">Github Repository
     </p>
   </div>
 </footer>

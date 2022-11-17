@@ -1,21 +1,34 @@
 <script>
+  import CopyClipBoard from '../../lib/components/CopyClipBoard.svelte';
+
+	let inputUrl = "";
+	let result = "";
+
+  function decode(url){
+    result = decodeURI(url);
+  }
+
+	const copy = () => {
+		const app = new CopyClipBoard({
+			target: document.getElementById('clipboard'),
+			props: { inputUrl },
+		});
+		app.$destroy();
+	}
 </script>
 
-<h1>URL encode decode</h1>
+<h1>URL decode</h1>
 <div>
-  <div class="field">
-    <label class="label">URL encode decode</label>
-    <div class="control">
-      <input class="input" type="text" placeholder="Text input">
-    </div>
+  <div>
+    <input bind:value={inputUrl} placeholder="Input URL">
+    <button on:click={decode(inputUrl)}>run</button>
+    <div>input: {inputUrl}</div>
   </div>
   
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Submit</button>
-    </div>
-    <div class="control">
-      <button class="button is-link is-light">Cancel</button>
-    </div>
+  <div>
+    <input bind:value={result}>
+    <button on:click={copy}>copy</button>
+    <div>output: {result}</div>
+    <div id="clipboard"></div>
   </div>
 </div>
