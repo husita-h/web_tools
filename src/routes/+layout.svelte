@@ -11,7 +11,7 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      link to <a href="https://github.com/husita-h/web_tools_sandbox">Github Repository
+      link to <a href="https://github.com/husita-h/web_tools">Github Repository
     </p>
   </div>
 </footer>
